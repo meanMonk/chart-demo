@@ -33,7 +33,7 @@
                 text: 'Current Vol: ',
                 align: 'right',
                 style: {
-                    color: '#FFF',
+                    color: '#707073',
                     fontWeight: '700'
                 }
 
@@ -42,6 +42,14 @@
               type: 'datetime',
               tickPixelInterval: 20,
               lineColor: '#707073',
+              title: {
+                text: 'Time Interval',
+                style: {
+                  color: '#A0A0A3',
+                  fontWeight: '700',
+                  fontSize: '16px'
+                }
+              },
               labels: {
                  style: {
                     color: '#E0E0E3'
@@ -50,7 +58,12 @@
             },
             yAxis: {
                 title: {
-                    text: 'Volume'
+                    text: 'Volume',
+                    style: {
+                      color: '#A0A0A3',
+                      fontWeight: '700',
+                      fontSize: '16px'
+                    }
                 },
                 lineColor: '#707073',
                 labels: {
