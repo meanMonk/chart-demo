@@ -29,9 +29,6 @@ body {
     background-position: center;
     height: 100%;
     background-color: #000;
-    background-image: url(./sc-splash2.jpg);
-    background-repeat: no-repeat;
-    background-size: 70% 80%;
 }
 body {
   color: #fff;
@@ -54,6 +51,11 @@ body {
 .cover-container {
   margin-right: auto;
   margin-left: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-image: url(../images/sc-splash2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 90%;
+  background-position: center;
 }
 
 /* Padding for spacing */
@@ -112,6 +114,7 @@ body {
 
 .cover {
   padding: 0 1.5rem;
+  background-color: rgba(0, 0, 0, 0.5)
 }
 .cover .btn-lg {
   padding: .75rem 1.25rem;
@@ -160,30 +163,6 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 60rem;
+    width: 60%;
   }
 }
-
-
-/*Custom style goes here for the sportcrypt*/
-
-/*body {
-    text-align: center;
-    background-color: black;
-  }
-  body img {
-    height: 75vh;
-  }
-
-  a:link { color : #fff; text-decoration : none;}
-  a:visited {color : #fff; text-decoration : none;}
-  a:hover {color : #7200ff; text-decoration : none;}
-
-  .links {
-    font-size: 60px;
-    font-family: sans;
-  }
-
-  .links > div {
-    margin-top: 10px;
-  }*/

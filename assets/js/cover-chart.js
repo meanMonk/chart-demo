@@ -8,7 +8,7 @@
 
         var scChart = Highcharts.chart('container', {
             chart: {
-                backgroundColor: 'rgba(255, 255, 255, 0.0)',
+                backgroundColor: 'rgba(255, 255, 255, 0)',
                 type: 'spline',
                 animation: Highcharts.svg, // don't animate in old IE
                 marginRight: 0,
@@ -16,17 +16,22 @@
                     load: function () {
                         // set up the updating of the chart each second
                         var series = this.series[0];
+                        var randT = 10;
                         setInterval(function () {
                             var x = (new Date()).getTime(), // current time
-                                y = (Math.random() * (0.60 - 0.20) + 0.20)
-                            scChart.setTitle({ text: 'Current Stock Value ' + y });
+                                y = (Math.random() * (60 - 40) + 40);
+                            scChart.setTitle({ text: 'Current Vol: ' + y.toFixed(4) });
                             series.addPoint([x, y], true, true);
-                        }, 1000);
+                        }, randT * 1000);
                     }
                 }
             },
+            credits:{
+              enabled: false
+            },
             title: {
-                text: 'Tilte Comming soon',
+                text: 'Current Vol: ',
+                align: 'right',
                 style: {
                     color: '#FFF',
                     fontWeight: '700'
@@ -35,11 +40,23 @@
             },
             xAxis: {
               type: 'datetime',
-              tickPixelInterval: 10
+              tickPixelInterval: 20,
+              lineColor: '#707073',
+              labels: {
+                 style: {
+                    color: '#E0E0E3'
+                 }
+              }
             },
             yAxis: {
                 title: {
-                    text: 'Value'
+                    text: 'Volume'
+                },
+                lineColor: '#707073',
+                labels: {
+                   style: {
+                      color: '#E0E0E3'
+                   }
                 },
                 plotLines: [{
                     value: 0,
@@ -68,8 +85,8 @@
                         time = (new Date()).getTime(),
                         i;
                     for (i = -19; i <= 0; i += 1) {
-                        var x1 = time + i * 1000,
-                        y1 = (Math.random() * (0.60 - 0.20) + 0.20)
+                        var x1 = time + i * 1000 * 10,
+                        y1 = (Math.random() * (60 - 40) + 40)
                         data.push({
                             x: x1,
                             y: y1
