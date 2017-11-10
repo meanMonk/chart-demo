@@ -20,7 +20,7 @@
                         setInterval(function () {
                             var x = (new Date()).getTime(), // current time
                                 y = (Math.random() * (60 - 40) + 40);
-                            scChart.setTitle({ text: 'Current Vol: ' + y.toFixed(4) });
+                            scChart.setTitle({ text: 'Probability: ' + y.toFixed(0) });
                             series.addPoint([x, y], true, true);
                         }, randT * 1000);
                     }
@@ -30,42 +30,32 @@
               enabled: false
             },
             title: {
-                text: 'Current Vol: ',
+                text: 'Current Price:',
                 align: 'right',
                 style: {
-                    color: '#707073',
+                    color: '#E0E0E3',
                     fontWeight: '700'
                 }
 
             },
             xAxis: {
               type: 'datetime',
-              tickPixelInterval: 20,
-              lineColor: '#707073',
-              title: {
-                text: 'Time Interval',
-                style: {
-                  color: '#A0A0A3',
-                  fontWeight: '700',
-                  fontSize: '16px'
-                }
-              },
+              tickInterval: 50,
+              lineColor: '#E0E0E3',
               labels: {
-                 style: {
-                    color: '#E0E0E3'
-                 }
+                  enabled: false
               }
             },
             yAxis: {
                 title: {
-                    text: 'Volume',
+                    text: 'Price',
                     style: {
-                      color: '#A0A0A3',
+                      color: '#E0E0E3',
                       fontWeight: '700',
                       fontSize: '16px'
                     }
                 },
-                lineColor: '#707073',
+                lineColor: '#E0E0E3',
                 labels: {
                    style: {
                       color: '#E0E0E3'
@@ -92,6 +82,7 @@
             },
             series: [{
                 name: 'Sport Crypt',
+                color: '#E0E0E3',
                 data: (function () {
                     // generate an array of random data
                     var data = [],
