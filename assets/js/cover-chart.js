@@ -44,9 +44,13 @@
               lineColor: '#E0E0E3',
               labels: {
                   enabled: false
-              }
+              },
+              minorTickLength: 0,
+              tickLength: 0
             },
             yAxis: {
+                min:0,
+                max: 100,
                 title: {
                     text: 'Price',
                     style: {
